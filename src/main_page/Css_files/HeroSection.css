@@ -1,0 +1,45 @@
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f0f0f0; /* Цвет фона можете настроить по вашему усмотрению */
+  }
+  
+  .hero-content {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem; /* Размер заголовка */
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem; /* Размер текста */
+    margin-bottom: 30px;
+  }
+  
+  .start-playing {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #007bff; /* Цвет кнопки */
+    color: #fff; /* Цвет текста кнопки */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .start-playing:hover {
+    background-color: #0056b3; /* Изменение цвета кнопки при наведении */
+  }
+  
+  .hero-image img {
+    margin-right: 80px;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+  }
+  

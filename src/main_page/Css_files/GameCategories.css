@@ -1,0 +1,32 @@
+.game-categories {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+  }
+  
+  .game-categories h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+  
+  .categories-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .category {
+    background-color: #e6e6fa;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .category:hover {
+    background-color: #d8bfd8;
+  }
+  

@@ -1,0 +1,37 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: white;
+  }
+  
+  .header-logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .header-nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .header-auth .log-in,
+  .header-auth .sign-up {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .header-auth .log-in {
+    background: none;
+    color: black;
+  }
+  
+  .header-auth .sign-up {
+    background-color: #e6e6fa;
+    color: black;
+  }
+  
