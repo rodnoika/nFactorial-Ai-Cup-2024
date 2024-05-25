@@ -1,6 +1,6 @@
 // GameGenerator.jsx
 import React, { useState } from 'react';
-import './Css_files/gen_character.css';
+import './Css_files/gen_GameCard.css';
 
 const GameGenerator = () => {
   const [prompt, setPrompt] = useState('');
@@ -37,7 +37,7 @@ const GameGenerator = () => {
 
   return (
     <div className="container">
-      <h1>Character Generator</h1>
+      <h1>Card Generator</h1>
       <textarea 
         value={prompt} 
         onChange={(e) => setPrompt(e.target.value)} 
@@ -46,15 +46,14 @@ const GameGenerator = () => {
         cols="50"
       />
       <br />
-      <button onClick={handleGenerateGame}>Generate Game</button>
+      <button onClick={handleGenerateGame}>Generate Text</button>
       <button onClick={handleGenerateImage}>Generate Image</button>
-      <div className="game-details">
-        <h2>Generated Game Details:</h2>
-        <pre>{gameDetails}</pre>
-      </div>
-      <div className="image-container">
-        <h2>Generated Image:</h2>
-        {imageData && <img src={imageData} alt="Generated" />}
+      <div className="card">
+        {imageData && <img src={imageData} alt="Generated" className="card-image" />}
+        <div className="card-details">
+          <h2>Описание</h2>
+          <pre>{gameDetails}</pre>
+        </div>
       </div>
     </div>
   );

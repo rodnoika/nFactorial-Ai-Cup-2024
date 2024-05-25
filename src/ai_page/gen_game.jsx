@@ -1,6 +1,6 @@
 // GameGenerator.jsx
 import React, { useState } from 'react';
-import './Css_files/gen_character.css';
+import './Css_files/gen_GameCard.css';
 
 const GameGenerator = () => {
   const [prompt, setPrompt] = useState('');

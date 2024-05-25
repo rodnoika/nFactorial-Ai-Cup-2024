@@ -31,7 +31,7 @@ const games = [
     {
       image: 'path/to/catan.jpg',
       title: 'Генерация историй',
-      description: 'Опиши ситуацию в игре или характер у персонажа и мы сгенерируем историю!'
+      description: 'Опиши ситуацию в игре мы сгенерируем историю и сюжет!'
     },
     {
       image: 'path/to/catan.jpg',
