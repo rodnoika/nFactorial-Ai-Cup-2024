@@ -17,8 +17,8 @@ def generate_image(prompt):
     image_url = response['data'][0]['url']
     return image_url
 
-    image_url = generate_image(prompt)
-    print("Generated Image URL:", image_url)
+image_url = generate_image(prompt)
+print("Generated Image URL:", image_url)
 
 with open('coordinates.csv', 'r') as csvfile:
     csvreader = csv.reader(csvfile)

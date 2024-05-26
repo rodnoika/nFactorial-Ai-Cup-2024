@@ -5,11 +5,11 @@ import json
 import base64
 import requests
 import time
-from src.ai_page.ai.AI_Stories import GameGeneratorStories
-from src.ai_page.ai.AI_GameCard import GameGeneratorCard
-from src.ai_page.ai.AI_Rules import GameGeneratorRules
-from src.ai_page.ai.AI_name import GameGeneratorName
-from src.ai_page.ai.AI_characters import GameGeneratorCharacters
+from AI_Stories import GameGeneratorStories
+from AI_GameCard import GameGeneratorCard
+from AI_Rules import GameGeneratorRules
+from AI_name import GameGeneratorName
+from AI_characters import GameGeneratorCharacters
 
 ai_app_2 = Flask(__name__)
 CORS(ai_app_2)
@@ -95,6 +95,7 @@ def generate_game():
         game_generator = GameGeneratorRules(openai_api_key="sk-org-uiupjxtl6nhsahmjscumzjdi-e6xVWysw9O3rAOrTJQwET3BlbkFJg0Xy3rI9eHB7YKDoXGaz")
     elif(prompt_id == 6):
         game_generator = GameGeneratorStories(openai_api_key="sk-org-uiupjxtl6nhsahmjscumzjdi-e6xVWysw9O3rAOrTJQwET3BlbkFJg0Xy3rI9eHB7YKDoXGaz")
+    
     game_details = game_generator.generate_game(prompt)
     return jsonify({"game_details": game_details})
 
