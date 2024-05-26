@@ -9,18 +9,22 @@ const GameCardGenerator = () => {
   const [gameDetails, setGameDetails] = useState('');
   const [imageData, setImageData] = useState('');
 
-  const handleGenerateGame = async () => {
+  const handleGenerateGame = async (prompt) => {
+    const promptId = 3; // Устанавливаем значение promptId равным 1
     const response = await fetch('http://localhost:5000/generate_game', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ prompt })
+        body: JSON.stringify({ prompt, promptId })
     });
     const data = await response.json();
-    setGameDetails(data.game_details);
-    // Добавляем сгенерированные данные об игре в JSON файл
-    addToJSON({ content: data.game_details });
+    if (data.game_details) {
+        setGameDetails(data.game_details);
+        addToJSON({ promptId, content: data.game_details });
+    } else {
+        alert('Failed to generate game');
+    }
 };
 
 const handleGenerateImage = async () => {

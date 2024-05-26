@@ -9,7 +9,7 @@ import time
 ai_app_4 = Flask(__name__)
 CORS(ai_app_4)
 
-class GameGenerator:
+class GameGeneratorName:
 
     def __init__(self, openai_api_key):
         openai.api_key = openai_api_key
