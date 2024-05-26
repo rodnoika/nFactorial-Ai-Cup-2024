@@ -10,7 +10,7 @@ const CharGenerator = () => {
 
     const handleGenerateGame = async (prompt) => {
       const promptId = 1; // Устанавливаем значение promptId равным 1
-      const response = await fetch('http://localhost:5000/generate_game', {
+      const response = await fetch('http://46.101.221.73:5000/generate_game', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'
@@ -27,7 +27,7 @@ const CharGenerator = () => {
   };
 
     const handleGenerateImage = async () => {
-        const response = await fetch('http://localhost:5000/generate_image', {
+        const response = await fetch('http://46.101.221.73:5000/generate_image', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -45,7 +45,7 @@ const CharGenerator = () => {
     };
     const addToJSON = async (data, fileName = 'character.json') => {
       try {
-          const response = await fetch('http://localhost:5000/add_to_json', {
+          const response = await fetch('http://46.101.221.73:5000/add_to_json', {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json'
