@@ -2,11 +2,11 @@ import React from 'react';
 import './Css_files/PopularGames.css';
 
 const games = [
-  { title: '3 Exciting Game', description: 'Alice, Bob, Carol', image: '/path/to/image1.jpg' },
-  { title: 'Game Night Fun', description: 'Game Night Headquarters', image: '/path/to/image2.jpg' },
-  { title: 'Laugh and Play', description: 'Fun-filled Game Nights', image: '/path/to/image3.jpg' },
-  { title: 'All About Strategy', description: 'Strategic Gameplay', image: '/path/to/image4.jpg' },
-  { title: 'It’s Game Time!', description: 'Board Game Expert, PhD', image: '/path/to/image5.jpg' },
+  { title: '3 Exciting Game', description: 'Alice, Bob, Carol', image: '  src/main_page/assets/0.jpg' },
+  { title: 'Game Night Fun', description: 'Game Night Headquarters', image: 'src/main_page/assets/1.jpg' },
+  { title: 'All About Strategy', description: 'Fun-filled Game Nights', image: 'src/main_page/assets/6.jpg' },
+  { title: 'Laugh and play', description: 'Strategic Gameplay', image: 'src/main_page/assets/7.jpeg' },
+  { title: 'It’s Game Time!', description: 'Board Game Expert, PhD', image: 'src/main_page/assets/01.jpg' },
 ];
 
 const PopularGames = () => (

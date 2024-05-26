@@ -6,8 +6,8 @@ import base64
 import requests
 import time
 
-app = Flask(__name__)
-CORS(app)
+ai_app_6 = Flask(__name__)
+CORS(ai_app_6)
 
 class GameGenerator:
 
@@ -30,7 +30,7 @@ class GameGenerator:
         return response.choices[0].message['content'].strip()
 
 
-@app.route('/generate_game', methods=['POST'])
+@ai_app_6.route('/generate_game', methods=['POST'])
 def generate_game():
     data = request.json
     prompt = data.get('prompt')
@@ -40,4 +40,4 @@ def generate_game():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    ai_app_6.run(host='0.0.0.0', port=5000)

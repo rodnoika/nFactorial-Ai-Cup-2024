@@ -6,11 +6,6 @@ const Footer = () => (
     <div className="footer-content">
       <div className="footer-section">
         <h4>GameBoardG</h4>
-        <div className="social-media">
-          <a href="#"><img src="/path/to/instagram.png" alt="Instagram" /></a>
-          <a href="#"><img src="/path/to/twitter.png" alt="Twitter" /></a>
-          <a href="#"><img src="/path/to/spotify.png" alt="Spotify" /></a>
-        </div>
       </div>
       <div className="footer-section">
         <h4>Company</h4>

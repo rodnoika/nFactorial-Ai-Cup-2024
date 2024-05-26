@@ -1,9 +1,19 @@
-/* GameGenerator.css */
+
 .container {
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
   }
+  .top-left {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: black; 
+    font-size: 20px; 
+    cursor: pointer;
+    z-index: 1; 
+    user-select: none;
+}
   
   textarea {
     width: 100%;

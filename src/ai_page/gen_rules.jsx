@@ -1,24 +1,46 @@
 import React, { useState } from 'react';
 import './Css_files/gen_character.css';
+import { BrowserRouter, Routes, Route, Navigate, Link } from 'react-router-dom';
 
-const GameGenerator = () => {
+
+const RulesGenerator = () => {
   const [prompt, setPrompt] = useState('');
   const [gameDetails, setGameDetails] = useState('');
 
   const handleGenerateGame = async () => {
     const response = await fetch('http://localhost:5000/generate_game', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ prompt })
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ prompt })
     });
     const data = await response.json();
     setGameDetails(data.game_details);
+    // Добавляем сгенерированные данные об игре в JSON файл
+    addToJSON({ content: data.game_details });
   };
-
+  const addToJSON = async (data, fileName = 'rules.json') => {
+    try {
+        const response = await fetch('http://localhost:5000/add_to_json', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ data, file_name: fileName }) // Передаем данные и имя файла
+        });
+        if (response.ok) {
+            console.log('Data added to JSON file successfully');
+        } else {
+            console.error('Failed to add data to JSON file');
+        }
+    } catch (error) {
+        console.error('Error adding data to JSON file:', error);
+    }
+    };
   return (
     <div className="container">
+      <div className='top-left'><Link to = '/AI'> Назад</Link></div>
       <h1>Rules Generator</h1>
       <textarea 
         value={prompt} 
@@ -37,4 +59,4 @@ const GameGenerator = () => {
   );
 };
 
-export default GameGenerator;
+export default RulesGenerator;
