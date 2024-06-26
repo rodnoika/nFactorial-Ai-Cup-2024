@@ -84,17 +84,17 @@ def generate_game():
     prompt = data.get('prompt')
     prompt_id = data.get('promptId')
     if(prompt_id == 2):
-        game_generator = GameGenerator(openai_api_key="sk-org-uiupjxtl6nhsahmjscumzjdi-e6xVWysw9O3rAOrTJQwET3BlbkFJg0Xy3rI9eHB7YKDoXGaz")
+        game_generator = GameGenerator(openai_api_key="")
     elif(prompt_id == 1):
-        game_generator = GameGeneratorCharacters(openai_api_key="sk-org-uiupjxtl6nhsahmjscumzjdi-e6xVWysw9O3rAOrTJQwET3BlbkFJg0Xy3rI9eHB7YKDoXGaz")
+        game_generator = GameGeneratorCharacters(openai_api_key="")
     elif(prompt_id == 3):
-        game_generator = GameGeneratorCard(openai_api_key="sk-org-uiupjxtl6nhsahmjscumzjdi-e6xVWysw9O3rAOrTJQwET3BlbkFJg0Xy3rI9eHB7YKDoXGaz")
+        game_generator = GameGeneratorCard(openai_api_key="")
     elif(prompt_id == 4):
-        game_generator = GameGeneratorName(openai_api_key="sk-org-uiupjxtl6nhsahmjscumzjdi-e6xVWysw9O3rAOrTJQwET3BlbkFJg0Xy3rI9eHB7YKDoXGaz")
+        game_generator = GameGeneratorName(openai_api_key="")
     elif(prompt_id == 5):
-        game_generator = GameGeneratorRules(openai_api_key="sk-org-uiupjxtl6nhsahmjscumzjdi-e6xVWysw9O3rAOrTJQwET3BlbkFJg0Xy3rI9eHB7YKDoXGaz")
+        game_generator = GameGeneratorRules(openai_api_key="")
     elif(prompt_id == 6):
-        game_generator = GameGeneratorStories(openai_api_key="sk-org-uiupjxtl6nhsahmjscumzjdi-e6xVWysw9O3rAOrTJQwET3BlbkFJg0Xy3rI9eHB7YKDoXGaz")
+        game_generator = GameGeneratorStories(openai_api_key="")
     
     game_details = game_generator.generate_game(prompt)
     return jsonify({"game_details": game_details})
