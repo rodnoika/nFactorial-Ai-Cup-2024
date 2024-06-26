@@ -34,7 +34,7 @@ class GameGeneratorRules:
 def generate_game():
     data = request.json
     prompt = data.get('prompt')
-    game_generator = GameGenerator(openai_api_key="sk-org-uiupjxtl6nhsahmjscumzjdi-e6xVWysw9O3rAOrTJQwET3BlbkFJg0Xy3rI9eHB7YKDoXGaz")
+    game_generator = GameGenerator(openai_api_key="")
     game_details = game_generator.generate_game(prompt)
     return jsonify({"game_details": game_details})
 
